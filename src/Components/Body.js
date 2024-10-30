@@ -6,7 +6,7 @@ const Body = ({togglePanel}) => {
   return (
     <div className='flex flex-row'>
         <SidePanel togglePanel = {togglePanel}/>
-        <VideoContainer />y
+        <VideoContainer togglePanel={togglePanel}/>
     </div>
   )
 }

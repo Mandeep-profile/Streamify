@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { YOUTUBE_API_URL } from '../utils/constants'
 import VideoCard from './VideoCard'
 
-const VideoContainer = () => {
+const VideoContainer = ({togglePanel}) => {
 
    const [videos, setVideos]= useState([])
 
@@ -17,8 +17,8 @@ const VideoContainer = () => {
     }, [])
 
   return (
-    <div className='flex flex-wrap ml-72 pt-24'>
-        {videos.map((videos) => <VideoCard key={videos.id} card = {videos} /> )}
+    <div className={`flex flex-wrap ${togglePanel ? "ml-40" : "ml-72" } pt-24`}>
+        {videos.map((videos) => <VideoCard key={videos.id} card = {videos} togglePanel={togglePanel} /> )}
     </div>
   )
 }
