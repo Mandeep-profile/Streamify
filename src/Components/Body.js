@@ -7,7 +7,7 @@ const Body = ({togglePanel}) => {
     <div className='flex flex-row'>
         <SidePanel togglePanel = {togglePanel}/>
         <VideoContainer togglePanel={togglePanel}/>
-    </div>
+        </div>
   )
 }
 

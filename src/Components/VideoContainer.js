@@ -17,7 +17,7 @@ const VideoContainer = ({togglePanel}) => {
     }, [])
 
   return (
-    <div className={`flex flex-wrap ${togglePanel ? "ml-40" : "ml-72" } pt-24`}>
+    <div className={`flex flex-row flex-wrap ${togglePanel ? "ml-40" : "ml-72"  } pt-24 transition-all duration-500 ease-in-out`}>
         {videos.map((videos) => <VideoCard key={videos.id} card = {videos} togglePanel={togglePanel} /> )}
     </div>
   )

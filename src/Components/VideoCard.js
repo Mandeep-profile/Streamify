@@ -5,7 +5,7 @@ const VideoCard = ({ card, togglePanel }) => {
         return <div>Loading...</div>; 
     }
     const { snippet, statistics } = card
-    const { channelTitle, thumbnails, title, publishedAt } = snippet
+    const { channelTitle, thumbnails, title } = snippet
 
     return (
         <div className={`${togglePanel ? "w-[310px] ml-5" : "w-1/3" } py-5 text-left flex flex-col`}>
